@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Severity Assessment</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Severity Assessment</h1>
+    <div class="slider-container">
+      <h3>Functionality Affected</h3>
+      <p>Which features or functionalities of the SaaS product are impacted by the risk? Risks that hinder core functionalities may be considered more severe.</p>
+      <input type="range" min="0" max="5" value="0" id="functionality">
+    </div>
+    <div class="slider-container">
+      <h3>Frequency of Occurrence</h3>
+      <p>How often does the risk occur or affect the customer? Risks that happen frequently might be more severe as they can cause ongoing disruptions.</p>
+      <input type="range" min="0" max="5" value="0" id="frequency">
+    </div>
+    <div class="slider-container">
+      <h3>Workarounds Available</h3>
+      <p>If there are no viable workarounds for the risk, it may be considered more severe, as it leaves the customer with no immediate solution.</p>
+      <input type="range" min="0" max="5" value="0" id="workarounds">
+    </div>
+    <div class="slider-container">
+      <h3>Number of Affected Users</h3>
+      <p>If the risk affects a large number of users or crucial stakeholders, its severity may increase.</p>
+      <input type="range" min="0" max="5" value="0" id="affectedUsers">
+    </div>
+    <button onclick="calculateSeverity()">Calculate</button>
+    <div id="resultBox">
+      <p>Median Score:</p>
+      <span id="medianScore">0</span>
+      <p>Severity Level:</p>
+      <span id="severityLevel">Low</span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
