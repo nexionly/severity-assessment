@@ -34,3 +34,12 @@ function calculateSeverity() {
     }
   }
   
+  // Add event listeners to the sliders
+  document.getElementById("functionality").addEventListener("input", calculateSeverity);
+  document.getElementById("frequency").addEventListener("input", calculateSeverity);
+  document.getElementById("workarounds").addEventListener("input", calculateSeverity);
+  document.getElementById("affectedUsers").addEventListener("input", calculateSeverity);
+  
+  // Calculate initial severity on page load
+  calculateSeverity();
+  
